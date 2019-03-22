@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- style -->
+  <link rel="stylesheet" href="css/style.css"></link>
+
+  <!-- script -->
+  <script defer src="https://use.fontawesome.com/releases/v5.8.0/js/all.js" integrity="sha384-ukiibbYjFS/1dhODSWD+PrZ6+CGCgf8VbyUH7bQQNUulL+2r59uGYToovytTf4Xm" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(function(){
+    $('.tag_class').click(function(){
+      const child = $(this).children('.tag_container')[0];
+      if(child.style.display == 'none'){
+        child.style.display = 'block';
+      }else{
+        child.style.display = 'none';
+      }
+    });
+
+    $('#menu_icon').click(function(){
+      $('menu_area').toggle();
+    });
+  });
+  </script>
+</head>
+<body>
+  <div id='menu_area' class='menu_area'>
+
+  </div>
+
+  <div class="wrapper">
+    <!-- header -->
+    <header>
+      <div id='menu_icon' class='menu_icon'>
+        <i class="fas fa-align-justify"></i>
+      </div>
+      <div class='app_logo'>Lo<br>go</div>
+    </header>
+
+    <!-- div[container] -->
+    <div class='container'>
+      <div class='container_form'>
+        <label>タグ名</label>
+        <select>
+          <optgroup label="分類">
+            <option>二次</option>
+            <option>三次</option>
+          </optgroup>
+          <optgroup label="キャラ名">
+            <option>XXXXX</option>
+            <option>YYYYY</option>
+            <option>ZZZZZ</option>
+          </optgroup>
+        </select>
+        <button>絞り込み</button>
+      </div>
+
+      <div class="image_viewer">
+      </div>
+    </div>
+
+    <!-- div[tag_list] -->
+    <div class='tag_list'>
+      <div class="tag_list_form">
+        <button>選択したタグを設定</button>
+      </div>
+      <ul>
+        <li class="tag_class">
+          <input type="checkbox">
+          <span class="tag_class_name">分類</span>
+          <ul class="tag_container">
+            <li class="tag">
+              <input type="checkbox">
+              <span class="tag_name">二次</span>
+            </li>
+            <li class="tag">
+              <input type="checkbox">
+              <span class="tag_name">三次</span>
+            </li>
+          </ul>
+        </li>
+        <li class="tag_class">
+          <input type="checkbox">
+          <span class="tag_class_name">キャラ名</span>
+          <ul class="tag_container">
+            <li class="tag">
+              <input type="checkbox">
+              <span class="tag_name">XXXXX</span>
+            </li>
+            <li class="tag">
+              <input type="checkbox">
+              <span class="tag_name">YYYYY</span>
+            </li>
+            <li class="tag">
+              <input type="checkbox">
+              <span class="tag_name">ZZZZZ</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- footer -->
+    <footer>
+    </fotter>
+  </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+html, body, header, footer, div, p, ul, li, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+
+/* menu_area */
+.menu_area{
+  display: none;
+  position: fixed;
+  left: 0px;
+  top: 0;
+
+  background: darkred;
+  width: 500px;
+  height: 100vh;
+}
+
+/* wrapper */
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template:
+    "header header"  3em
+    "viewer tag_list" auto
+    "footer footer" 1em/
+    60vw 1fr;
+}
+
+/* rayaut */
+header{
+  grid-area: header;
+
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  grid-area: viewer;
+
+  border: 1px solid gray;
+  resize: horizontal;
+}
+
+.tag_list{
+  grid-area: tag_list;
+
+  border: 1px solid gray;
+}
+
+footer{
+  grid-area: footer;
+
+  border: 1px solid gray;
+}
+
+/* header: detail */
+.menu_icon{
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 3em;
+  margin: 0 1em;
+
+  cursor: pointer;
+}
+
+.app_logo{
+}
+
+/* container: detail */
+.container_form{
+  line-height: 2em;
+}
+
+/* tag_list:detail */
+.tag_list_form{
+  line-height: 2em;
+}
+
+.tag_list li{
+  list-style: none;
+}
+
+.tag_class, .tag{
+  border-top: 1px solid skyblue;
+  border-width: 1px 0;
+
+  padding: 0.5em 0;
+  line-height: normal;
+}
+
+.tag_class:last-child{
+  border-bottom: 1px solid skyblue;
+}
+
+.tag_container{
+  display: none;
+
+  margin-left: 1em;
+}
