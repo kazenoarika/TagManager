@@ -8,28 +8,25 @@
   <!-- script -->
   <script defer src="https://use.fontawesome.com/releases/v5.8.0/js/all.js" integrity="sha384-ukiibbYjFS/1dhODSWD+PrZ6+CGCgf8VbyUH7bQQNUulL+2r59uGYToovytTf4Xm" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-  $(function(){
-    $('.tag_class').click(function(){
-      const child = $(this).children('.tag_container')[0];
-      if(child.style.display == 'none'){
-        child.style.display = 'block';
-      }else{
-        child.style.display = 'none';
-      }
-    });
-
-    $('#menu_icon').click(function(){
-      $('menu_area').toggle();
-    });
-  });
-  </script>
+  <script src="js/TagManager.js"></script>
 </head>
 <body>
-  <div id='menu_area' class='menu_area'>
-
+  <!-- menu_window -->
+  <div id="menu_window" class="menu_window">
+    <div id="menu_area" class='menu_area'>
+      <div class="menu_area_title">メニュー</div>
+      <ul class="menu_area_list">
+        <li>フォルダ変更</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>終了</li>
+      </ul>
+    </div>
   </div>
 
+  <!-- wrapper -->
   <div class="wrapper">
     <!-- header -->
     <header>
@@ -58,6 +55,7 @@
       </div>
 
       <div class="image_viewer">
+        <img src="image/minecraft.png">
       </div>
     </div>
 
@@ -106,5 +104,6 @@
     <footer>
     </fotter>
   </div>
+  <!-- end wrapper -->
 </body>
 </html>
